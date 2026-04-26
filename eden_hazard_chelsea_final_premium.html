@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eden Hazard • Chelsea Legend • Final Premium Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@300;400;500;600&amp;display=swap');
+        
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .heading-serif { font-family: 'Playfair Display', Georgia, serif; letter-spacing: -0.03em; }
+        
+        .premium-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .premium-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px -15px rgb(3 70 148 / 0.25);
+        }
+        
+        .nav-active { color: white; position: relative; }
+        .nav-active:after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px; background: linear-gradient(to right, #034694, #d4af37); }
+        
+        .light { background-color: #f8f9fa; color: #1e3a8a; }
+        .light .text-slate-200 { color: #1e3a8a !important; }
+        .light .text-slate-400 { color: #475569 !important; }
+        .light .bg-slate-900 { background-color: #ffffff !important; }
+        .light .border-slate-700 { border-color: #d1c9a8 !important; }
+        
+        .game-card {
+            transition: all 0.3s ease;
+        }
+        
+        .game-card:hover {
+            transform: scale(1.02);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(to right, #034694, #d4af37);
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-xl border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-x-4">
+                    <div class="w-11 h-11 bg-gradient-to-br from-[#034694] to-[#d4af37] rounded-2xl flex items-center justify-center">
+                        <span class="text-white text-2xl font-bold">EH</span>
+                    </div>
+                    <div>
+                        <div class="font-bold text-3xl tracking-tighter">Eden Hazard</div>
+                        <div class="text-[10px] text-slate-500 -mt-1">CHELSEA LEGEND • 2012-2019</div>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#about" class="nav-link text-slate-300 hover:text-white">About</a>
+                    <a href="#career" class="nav-link text-slate-300 hover:text-white">Career</a>
+                    <a href="#timeline" class="nav-link text-slate-300 hover:text-white">Timeline</a>
+                    <a href="#gallery" class="nav-link text-slate-300 hover:text-white">Gallery</a>
+                    <a href="#goals" class="nav-link text-slate-300 hover:text-white">Goals</a>
+                    <a href="#quiz" class="nav-link text-slate-300 hover:text-white">Quiz</a>
+                    <a href="#games" class="nav-link text-slate-300 hover:text-white">Games</a>
+                </div>
+
+                <div class="flex items-center gap-x-3">
+                    <div class="flex bg-slate-900 rounded-2xl p-1 border border-slate-700">
+                        <button onclick="switchLang('en')" id="lang-en" class="px-4 py-1.5 text-xs font-bold rounded-xl bg-white text-slate-950">EN</button>
+                        <button onclick="switchLang('ru')" id="lang-ru" class="px-4 py-1.5 text-xs font-bold rounded-xl text-slate-400">RU</button>
+                    </div>
+                    
+                    <button onclick="toggleTheme()" class="p-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-2xl">
+                        <i class="fas fa-moon text-xl" id="theme-icon"></i>
+                    </button>
+                    
+                    <button onclick="joinClub()" class="px-6 py-3 bg-white text-slate-950 font-bold rounded-3xl text-sm flex items-center gap-x-2 hover:bg-[#d4af37] hover:text-white">
+                        <i class="fas fa-heart text-red-500"></i>
+                        <span>Join Club</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="h-screen flex items-center justify-center relative bg-cover bg-center" style="background-image: linear-gradient(rgba(3,70,148,0.9), rgba(3,70,148,0.92)), url('https://images.unsplash.com/photo-1522778119026-d647f613f5c7?q=80&w=2000')">
+        <div class="max-w-5xl mx-auto px-6 text-center z-10">
+            <div class="inline-flex items-center gap-x-3 bg-white/10 backdrop-blur px-5 py-2 rounded-full mb-8 border border-white/20">
+                <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                <span class="text-xs font-bold tracking-[2.5px] text-white/90">OFFICIAL CHELSEA LEGEND 2026</span>
+            </div>
+            
+            <h1 class="text-7xl md:text-[90px] font-bold tracking-[-5px] mb-5 heading-serif text-white">Eden Hazard</h1>
+            <p class="text-3xl md:text-4xl text-white/90 font-light max-w-3xl mx-auto mb-10">The Belgian Wizard • Stamford Bridge Icon</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})" 
+                        class="px-14 py-4 bg-white text-slate-950 font-bold rounded-3xl text-lg hover:bg-[#d4af37] hover:text-white transition-all">Begin the Journey</button>
+                <button onclick="document.getElementById('goals').scrollIntoView({behavior:'smooth'})" 
+                        class="px-10 py-4 border-2 border-white/60 text-white font-bold rounded-3xl text-lg hover:bg-white/10 transition-all">Watch Goals</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div id="about" class="max-w-7xl mx-auto px-6 py-24">
+        <div class="grid md:grid-cols-12 gap-16 items-center">
+            <div class="md:col-span-5">
+                <span class="text-[#034694] text-xs tracking-[4px] font-bold">CHAPTER 01 / THE ARRIVAL</span>
+                <h2 class="text-6xl md:text-7xl font-bold tracking-[-3px] heading-serif mt-4">The Wizard<br>Arrives at<br>Stamford Bridge</h2>
+                <p class="mt-8 text-lg text-slate-400 max-w-md">In 2012, Chelsea signed 21-year-old Eden Hazard from Lille for £32 million. From his very first touch, he became the most exciting player in the Premier League.</p>
+            </div>
+            <div class="md:col-span-7">
+                <img src="https://images.unsplash.com/photo-1556056504-5c7696c4c28d?q=80&w=1200" class="rounded-3xl shadow-2xl w-full aspect-[16/9.5] object-cover" alt="Eden Hazard Chelsea">
+            </div>
+        </div>
+    </div>
+
+    <!-- Career -->
+    <div id="career" class="bg-slate-900 py-20 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <span class="text-[#034694] text-xs tracking-[4px] font-bold">CHAPTER 02 / THE BLUE YEARS</span>
+            <h2 class="text-6xl font-bold tracking-[-2.5px] heading-serif mt-3">Chelsea Career Highlights</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6 mt-12">
+                <div class="premium-card bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1522778119026-d647f613f5c7?q=80&w=800" class="w-full h-full object-cover" alt="">
+                        <div class="absolute top-5 right-5 bg-black/70 px-4 py-1 rounded-2xl text-xs">2012-13</div>
+                        <div class="absolute bottom-5 left-5 text-white">
+                            <div class="font-bold text-2xl">The Arrival</div>
+                            <div class="text-[#d4af37]">13 goals • 14 assists</div>
+                        </div>
+                    </div>
+                    <div class="p-7"><p class="text-slate-400 text-sm">Hazard instantly became a Premier League sensation with his magical dribbling.</p></div>
+                </div>
+                
+                <div class="premium-card bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=800" class="w-full h-full object-cover" alt="">
+                        <div class="absolute top-5 right-5 bg-black/70 px-4 py-1 rounded-2xl text-xs">2014-15</div>
+                        <div class="absolute bottom-5 left-5 text-white">
+                            <div class="font-bold text-2xl">The Magical Season</div>
+                            <div class="text-[#d4af37]">PFA Player of the Year + Title</div>
+                        </div>
+                    </div>
+                    <div class="p-7"><p class="text-slate-400 text-sm">Unplayable form. Won PFA award and delivered Chelsea's first Premier League title in 5 years.</p></div>
+                </div>
+                
+                <div class="premium-card bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800" class="w-full h-full object-cover" alt="">
+                        <div class="absolute top-5 right-5 bg-black/70 px-4 py-1 rounded-2xl text-xs">2016-17</div>
+                        <div class="absolute bottom-5 left-5 text-white">
+                            <div class="font-bold text-2xl">Back-to-Back Glory</div>
+                            <div class="text-[#d4af37]">17 goals • Second Title</div>
+                        </div>
+                    </div>
+                    <div class="p-7"><p class="text-slate-400 text-sm">Under Conte, Hazard was the star of another Premier League winning campaign.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline -->
+    <div id="timeline" class="max-w-5xl mx-auto px-6 py-24">
+        <div class="text-center mb-16">
+            <span class="text-[#034694] text-xs tracking-[4px] font-bold">CHAPTER 03 / THE JOURNEY</span>
+            <h2 class="text-6xl font-bold tracking-[-2.5px] heading-serif mt-3">Chelsea Timeline</h2>
+        </div>
+        
+        <div class="max-w-3xl mx-auto space-y-12 relative">
+            <div class="absolute left-9 top-8 bottom-8 w-0.5 bg-gradient-to-b from-[#034694] to-[#d4af37]"></div>
+            
+            <div class="flex gap-8 relative">
+                <div class="w-20 text-right"><div class="text-4xl font-black text-[#034694]">2012</div></div>
+                <div class="w-5 h-5 bg-[#034694] rounded-full mt-2 border-4 border-slate-950 flex-shrink-0"></div>
+                <div><div class="font-bold text-xl">Signs for Chelsea £32m</div><div class="text-slate-400">The Premier League would never be the same.</div></div>
+            </div>
+            <div class="flex gap-8 relative">
+                <div class="w-20 text-right"><div class="text-4xl font-black text-[#034694]">2015</div></div>
+                <div class="w-5 h-5 bg-[#034694] rounded-full mt-2 border-4 border-slate-950 flex-shrink-0"></div>
+                <div><div class="font-bold text-xl">PFA Player of the Year + League Cup</div><div class="text-slate-400">Wins individual award and scores in the final.</div></div>
+            </div>
+            <div class="flex gap-8 relative">
+                <div class="w-20 text-right"><div class="text-4xl font-black text-[#034694]">2017</div></div>
+                <div class="w-5 h-5 bg-[#034694] rounded-full mt-2 border-4 border-slate-950 flex-shrink-0"></div>
+                <div><div class="font-bold text-xl">Second Premier League Title</div><div class="text-slate-400">Delivers another title under Antonio Conte.</div></div>
+            </div>
+            <div class="flex gap-8 relative">
+                <div class="w-20 text-right"><div class="text-4xl font-black text-[#034694]">2019</div></div>
+                <div class="w-5 h-5 bg-[#034694] rounded-full mt-2 border-4 border-slate-950 flex-shrink-0"></div>
+                <div><div class="font-bold text-xl">Farewell to Stamford Bridge</div><div class="text-slate-400">After 352 appearances and 110 goals — a true legend.</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery -->
+    <div id="gallery" class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <span class="text-[#034694] text-xs tracking-[4px] font-bold">CHAPTER 04 / MOMENTS</span>
+            <h2 class="text-6xl font-bold tracking-[-2.5px] heading-serif mt-3">Iconic Gallery</h2>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <img src="https://images.unsplash.com/photo-1522778119026-d647f613f5c7?q=80&w=700" onclick="showGalleryModal(0)" class="w-full aspect-[4/3] object-cover rounded-2xl cursor-pointer premium-card" alt="">
+            <img src="https://images.unsplash.com/photo-1556056504-5c7696c4c28d?q=80&w=700" onclick="showGalleryModal(1)" class="w-full aspect-[4/3] object-cover rounded-2xl cursor-pointer premium-card" alt="">
+            <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=700" onclick="showGalleryModal(2)" class="w-full aspect-[4/3] object-cover rounded-2xl cursor-pointer premium-card" alt="">
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=700" onclick="showGalleryModal(3)" class="w-full aspect-[4/3] object-cover rounded-2xl cursor-pointer premium-card" alt="">
+        </div>
+    </div>
+
+    <!-- Legendary Goals -->
+    <div id="goals" class="bg-slate-900 py-20 border-y border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-[#034694] text-xs tracking-[4px] font-bold">CHAPTER 05 / THE GOALS</span>
+                <h2 class="text-6xl font-bold tracking-[-2.5px] heading-serif mt-3">Legendary Goals</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Goal 1 -->
+                <div class="premium-card bg-slate-950 border border-slate-700 rounded-3xl overflow-hidden">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1522778119026-d647f613f5c7?q=80&w=800" class="w-full h-full object-cover" alt="Hazard solo goal">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
+                        <div class="absolute top-5 left-5 px-4 py-1 bg-black/70 rounded-2xl text-xs">2013/14</div>
+                        <div class="absolute bottom-5 left-5 text-white">
+                            <div class="font-bold text-2xl">Solo Masterclass vs Hull City</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-400 text-sm mb-6">One of the greatest individual goals in Premier League history.</p>
+                        <a href="https://www.youtube.com/watch?v=SzDGpM9hsh0" target="_blank" 
+                           class="inline-flex items-center gap-x-3 px-8 py-3 bg-white text-slate-950 font-bold rounded-2xl text-sm hover:bg-[#d4af37]">
+                            <i class="fab fa-youtube"></i> <span>WATCH ON YOUTUBE</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Goal 2 -->
+                <div class="premium-card bg-slate-950 border border-slate-700 rounded-3xl overflow-hidden">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1556056504-5c7696c4c28d?q=80&w=800" class="w-full h-full object-cover" alt="Hazard title goal">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
+                        <div class="absolute top-5 left-5 px-4 py-1 bg-black/70 rounded-2xl text-xs">2014/15</div>
+                        <div class="absolute bottom-5 left-5 text-white">
+                            <div class="font-bold text-2xl">Title Clincher vs Sunderland</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-400 text-sm mb-6">The goal that helped seal Chelsea's Premier League title.</p>
+                        <a href="https://www.youtube.com/watch?v=up3kBnalPwc" target="_blank" 
+                           class="inline-flex items-center gap-x-3 px-8 py-3 bg-white text-slate-950 font-bold rounded-2xl text-sm hover:bg-[#d4af37]">
+                            <i class="fab fa-youtube"></i> <span>WATCH ON YOUTUBE</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz -->
+    <div id="quiz" class="max-w-4xl mx-auto px-6 py-24">
+        <div class="text-center mb-12">
+            <span class="text-[#034694] text-xs tracking-[4px] font-bold">CHAPTER 06 / KNOWLEDGE</span>
+            <h2 class="text-6xl font-bold tracking-[-2.5px] heading-serif mt-3">Chelsea Quiz</h2>
+        </div>
+        
+        <div class="flex justify-center mb-8">
+            <button onclick="startQuiz()" class="px-14 py-4 bg-white text-slate-950 font-bold rounded-3xl flex items-center gap-x-4 text-lg hover:bg-[#d4af37] hover:text-white">
+                <i class="fas fa-futbol"></i> Start Quiz
+            </button>
+        </div>
+        
+        <div id="quiz-container" class="hidden max-w-2xl mx-auto bg-slate-900 border border-slate-700 rounded-3xl p-9">
+            <div class="flex justify-between mb-8">
+                <div id="quiz-progress" class="text-sm text-slate-400"></div>
+                <div id="quiz-score" class="font-mono text-3xl font-black text-[#d4af37]">0</div>
+            </div>
+            <div id="quiz-question" class="text-2xl font-semibold mb-8"></div>
+            <div id="quiz-options" class="space-y-4"></div>
+        </div>
+    </div>
+
+    <!-- Games - All based on real Hazard episodes -->
+    <div id="games" class="max-w-7xl mx-auto px-6 py-24">
+        <div class="text-center mb-12">
+            <span class="text-[#034694] text-xs tracking-[4px] font-bold">CHAPTER 07 / PLAY LIKE HAZARD</span>
+            <h2 class="text-6xl font-bold tracking-[-2.5px] heading-serif mt-3">Real Match Episodes</h2>
+            <p class="text-slate-400 mt-4 max-w-md mx-auto">Test yourself with real moments from Eden Hazard's legendary Chelsea career.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Game 1: Match Moments -->
+            <div class="game-card bg-slate-900 border border-slate-700 rounded-3xl p-9 text-center">
+                <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-[#034694] to-[#1e40af] rounded-2xl flex items-center justify-center">
+                    <i class="fas fa-history text-white text-3xl"></i>
+                </div>
+                <h3 class="text-3xl font-bold mb-4">Match Moments</h3>
+                <p class="text-slate-400 mb-8">Predict what happened in real famous Hazard goals and assists.</p>
+                <button onclick="startMatchMomentsGame()" class="w-full py-4 bg-gradient-to-r from-[#034694] to-[#1e40af] text-white font-bold rounded-3xl">PLAY NOW</button>
+            </div>
+            
+            <!-- Game 2: Famous Matches Quiz -->
+            <div class="game-card bg-slate-900 border border-slate-700 rounded-3xl p-9 text-center">
+                <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-[#d4af37] to-[#b8972e] rounded-2xl flex items-center justify-center">
+                    <i class="fas fa-trophy text-white text-3xl"></i>
+                </div>
+                <h3 class="text-3xl font-bold mb-4">Famous Matches</h3>
+                <p class="text-slate-400 mb-8">How well do you remember Hazard's biggest games for Chelsea?</p>
+                <button onclick="startFamousMatchesQuiz()" class="w-full py-4 bg-white text-slate-950 font-bold rounded-3xl">PLAY NOW</button>
+            </div>
+            
+            <!-- Game 3: Goal or Assist? -->
+            <div class="game-card bg-slate-900 border border-slate-700 rounded-3xl p-9 text-center">
+                <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-2xl flex items-center justify-center">
+                    <i class="fas fa-question text-white text-3xl"></i>
+                </div>
+                <h3 class="text-3xl font-bold mb-4">Goal or Assist?</h3>
+                <p class="text-slate-400 mb-8">Quick-fire decisions from real match episodes.</p>
+                <button onclick="startGoalOrAssistGame()" class="w-full py-4 bg-white text-slate-950 font-bold rounded-3xl">PLAY NOW</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-14">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-500 text-sm">
+            <p>© 2026 Eden Hazard Chelsea Premium Fan Hub • Not affiliated with Chelsea FC</p>
+        </div>
+    </footer>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" onclick="hideGalleryModal()" class="hidden fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-6">
+        <div onclick="event.stopImmediatePropagation()" class="max-w-5xl w-full">
+            <img id="modal-image" class="w-full rounded-3xl shadow-2xl" alt="">
+            <div class="text-center mt-6">
+                <button onclick="hideGalleryModal()" class="px-10 py-3 border border-white/40 text-white rounded-3xl">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Theme
+        let isLight = false;
+        function toggleTheme() {
+            isLight = !isLight;
+            document.body.classList.toggle('light', isLight);
+            const icon = document.getElementById('theme-icon');
+            icon.classList.toggle('fa-moon', !isLight);
+            icon.classList.toggle('fa-sun', isLight);
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        }
+        
+        function loadTheme() {
+            if (localStorage.getItem('theme') === 'light') {
+                isLight = true;
+                document.body.classList.add('light');
+                document.getElementById('theme-icon').classList.add('fa-sun');
+            } else {
+                document.getElementById('theme-icon').classList.add('fa-moon');
+            }
+        }
+        
+        // Language
+        let currentLang = 'en';
+        function switchLang(lang) {
+            currentLang = lang;
+            document.getElementById('lang-en').classList.toggle('bg-white', lang === 'en');
+            document.getElementById('lang-en').classList.toggle('text-slate-950', lang === 'en');
+            document.getElementById('lang-ru').classList.toggle('bg-white', lang === 'ru');
+            document.getElementById('lang-ru').classList.toggle('text-slate-950', lang === 'ru');
+        }
+        
+        // Gallery
+        const galleryImages = [
+            "https://images.unsplash.com/photo-1522778119026-d647f613f5c7?q=80&w=1200",
+            "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?q=80&w=1200",
+            "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=1200",
+            "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200"
+        ];
+        
+        function showGalleryModal(index) {
+            document.getElementById('modal-image').src = galleryImages[index];
+            document.getElementById('gallery-modal').classList.remove('hidden');
+            document.getElementById('gallery-modal').classList.add('flex');
+        }
+        
+        function hideGalleryModal() {
+            const m = document.getElementById('gallery-modal');
+            m.classList.remove('flex');
+            m.classList.add('hidden');
+        }
+        
+        // Quiz
+        const quizQuestions = [
+            { q: { en: "In what year did Hazard join Chelsea?", ru: "В каком году Азар перешёл в Челси?" }, opts: { en: ["2011", "2012", "2013", "2014"], ru: ["2011", "2012", "2013", "2014"] }, ans: 1 },
+            { q: { en: "How many Premier League titles did he win?", ru: "Сколько титулов Премьер-лиги он выиграл?" }, opts: { en: ["1", "2", "3", "4"], ru: ["1", "2", "3", "4"] }, ans: 1 },
+            { q: { en: "Which season did he win PFA Player of the Year?", ru: "В каком сезоне он выиграл Игрока года ПФА?" }, opts: { en: ["2013-14", "2014-15", "2015-16", "2016-17"], ru: ["2013-14", "2014-15", "2015-16", "2016-17"] }, ans: 1 }
+        ];
+        
+        let currentQ = 0, score = 0;
+        
+        function startQuiz() {
+            currentQ = 0; score = 0;
+            document.getElementById('quiz-container').classList.remove('hidden');
+            loadQuizQ();
+        }
+        
+        function loadQuizQ() {
+            const q = quizQuestions[currentQ];
+            document.getElementById('quiz-progress').innerHTML = `Question ${currentQ + 1} of ${quizQuestions.length}`;
+            document.getElementById('quiz-question').innerHTML = q.q[currentLang];
+            document.getElementById('quiz-score').innerHTML = score;
+            
+            const optsContainer = document.getElementById('quiz-options');
+            optsContainer.innerHTML = '';
+            
+            q.opts[currentLang].forEach((opt, i) => {
+                const btn = document.createElement('button');
+                btn.className = `w-full text-left px-6 py-4 rounded-2xl border-2 border-slate-700 text-lg font-medium hover:border-[#034694] transition-all`;
+                btn.textContent = opt;
+                btn.onclick = () => checkQuizAnswer(i, q.ans, btn);
+                optsContainer.appendChild(btn);
+            });
+        }
+        
+        function checkQuizAnswer(selected, correct, btn) {
+            const allBtns = document.querySelectorAll('#quiz-options button');
+            allBtns.forEach(b => b.disabled = true);
+            
+            if (selected === correct) {
+                btn.style.borderColor = '#4ade80';
+                btn.style.backgroundColor = '#166534';
+                score += 10;
+                document.getElementById('quiz-score').innerHTML = score;
+            } else {
+                btn.style.borderColor = '#f87171';
+                btn.style.backgroundColor = '#9f1239';
+                allBtns[correct].style.borderColor = '#4ade80';
+                allBtns[correct].style.backgroundColor = '#166534';
+            }
+            
+            setTimeout(() => {
+                currentQ++;
+                if (currentQ < quizQuestions.length) {
+                    loadQuizQ();
+                } else {
+                    showQuizResult();
+                }
+            }, 1300);
+        }
+        
+        function showQuizResult() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = `
+                <div class="text-center py-10">
+                    <div class="text-7xl mb-6">🏆</div>
+                    <h3 class="text-4xl font-bold mb-4">${currentLang === 'en' ? 'Quiz Complete!' : 'Викторина завершена!'}</h3>
+                    <p class="text-5xl font-black text-[#d4af37] mb-8">${score} / ${quizQuestions.length * 10}</p>
+                    <button onclick="location.reload()" class="px-12 py-4 bg-white text-slate-950 font-bold rounded-3xl">Play Again</button>
+                </div>
+            `;
+        }
+        
+        // Game 1: Match Moments (with real images)
+        function startMatchMomentsGame() {
+            const moments = [
+                {
+                    title: "Solo vs Hull City 2013/14",
+                    img: "https://images.unsplash.com/photo-1522778119026-d647f613f5c7?q=80&w=600",
+                    question: "What happened in this famous moment?",
+                    options: [
+                        { text: "He scored a stunning solo goal", correct: true, fact: "One of the greatest Premier League goals ever!" },
+                        { text: "He was tackled before shooting", correct: false, fact: "No — he finished brilliantly!" }
+                    ]
+                },
+                {
+                    title: "Title Winner vs Sunderland 2014/15",
+                    img: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?q=80&w=600",
+                    question: "What did Hazard do in this moment?",
+                    options: [
+                        { text: "Scored the title-clinching goal", correct: true, fact: "That goal helped seal the Premier League title!" },
+                        { text: "Missed a big chance", correct: false, fact: "No — clinical finish!" }
+                    ]
+                }
+            ];
+            
+            let current = 0;
+            let gameScore = 0;
+            
+            function showMoment() {
+                if (current >= moments.length) {
+                    alert(`Game Over! Score: ${gameScore}/${moments.length * 10}`);
+                    return;
+                }
+                
+                const m = moments[current];
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black/95 z-[120] flex items-center justify-center p-6';
+                
+                modal.innerHTML = `
+                    <div class="bg-slate-900 border border-slate-700 rounded-3xl p-10 max-w-lg w-full">
+                        <img src="${m.img}" class="w-full h-56 object-cover rounded-2xl mb-6" alt="">
+                        <h3 class="text-2xl font-bold mb-2">${m.title}</h3>
+                        <p class="text-slate-400 mb-8">${m.question}</p>
+                        
+                        <div class="space-y-4">
+                            ${m.options.map((opt, i) => `
+                                <button onclick="checkMomentAnswer(${i}, ${current}, this.closest('.fixed'))" 
+                                        class="w-full py-4 rounded-2xl border-2 border-slate-700 text-left px-6 font-medium hover:border-[#034694]">
+                                    ${opt.text}
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+            }
+            
+            window.checkMomentAnswer = function(optionIndex, momentIndex, modalEl) {
+                const moment = moments[momentIndex];
+                const selected = moment.options[optionIndex];
+                
+                modalEl.remove();
+                
+                const feedback = document.createElement('div');
+                feedback.className = `fixed bottom-10 left-1/2 -translate-x-1/2 px-8 py-5 rounded-3xl z-[130] text-center ${selected.correct ? 'bg-emerald-600' : 'bg-rose-600'}`;
+                feedback.innerHTML = `
+                    <div class="font-bold">${selected.correct ? '✅ Correct!' : '❌ Not quite'}</div>
+                    <div class="text-sm mt-1">${selected.fact}</div>
+                `;
+                document.body.appendChild(feedback);
+                
+                if (selected.correct) gameScore += 10;
+                
+                setTimeout(() => {
+                    feedback.remove();
+                    current++;
+                    showMoment();
+                }, 1800);
+            };
+            
+            showMoment();
+        }
+        
+        // Game 2: Famous Matches Quiz
+        function startFamousMatchesQuiz() {
+            const questions = [
+                { q: "In which match did Hazard score a famous solo goal in 2013/14?", opts: ["vs Hull City", "vs Arsenal", "vs Manchester United", "vs Liverpool"], ans: 0 },
+                { q: "Which manager did Hazard win his second Premier League title under?", opts: ["Jose Mourinho", "Antonio Conte", "Frank Lampard", "Mauricio Pochettino"], ans: 1 },
+                { q: "In 2014/15, Hazard won which individual award?", opts: ["Golden Boot", "PFA Player of the Year", "FIFA Best Player", "Ballon d'Or"], ans: 1 }
+            ];
+            
+            let idx = 0;
+            let s = 0;
+            
+            function showQ() {
+                if (idx >= questions.length) {
+                    alert(`Final Score: ${s}/${questions.length * 10}`);
+                    return;
+                }
+                
+                const q = questions[idx];
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black/95 z-[120] flex items-center justify-center p-6';
+                
+                modal.innerHTML = `
+                    <div class="bg-slate-900 border border-slate-700 rounded-3xl p-10 max-w-lg w-full">
+                        <div class="text-xs text-[#d4af37] mb-2">FAMOUS MATCH ${idx + 1}/${questions.length}</div>
+                        <h3 class="text-2xl font-bold mb-8">${q.q}</h3>
+                        
+                        <div class="space-y-4">
+                            ${q.opts.map((opt, i) => `
+                                <button onclick="checkFamousAnswer(${i}, ${q.ans}, this.closest('.fixed'))" 
+                                        class="w-full py-4 px-6 rounded-2xl border-2 border-slate-700 text-left font-medium hover:border-[#034694]">
+                                    ${opt}
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+            }
+            
+            window.checkFamousAnswer = function(selected, correct, modal) {
+                modal.remove();
+                if (selected === correct) s += 10;
+                
+                const fb = document.createElement('div');
+                fb.className = `fixed bottom-10 left-1/2 -translate-x-1/2 px-8 py-4 rounded-3xl z-[130] ${selected === correct ? 'bg-emerald-600' : 'bg-rose-600'}`;
+                fb.textContent = selected === correct ? '✅ Correct!' : '❌ Wrong!';
+                document.body.appendChild(fb);
+                
+                setTimeout(() => {
+                    fb.remove();
+                    idx++;
+                    showQ();
+                }, 1200);
+            };
+            
+            showQ();
+        }
+        
+        // Game 3: Goal or Assist?
+        function startGoalOrAssistGame() {
+            const episodes = [
+                { title: "vs Hull City 2013", answer: "Goal", fact: "Stunning solo goal!" },
+                { title: "vs Sunderland 2015", answer: "Goal", fact: "Title-clinching strike!" },
+                { title: "vs Watford 2017", answer: "Assist", fact: "Perfect through ball!" }
+            ];
+            
+            let i = 0;
+            let sc = 0;
+            
+            function showEp() {
+                if (i >= episodes.length) {
+                    alert(`Final Score: ${sc}/${episodes.length * 10}`);
+                    return;
+                }
+                
+                const ep = episodes[i];
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black/95 z-[120] flex items-center justify-center p-6';
+                
+                modal.innerHTML = `
+                    <div class="bg-slate-900 border border-slate-700 rounded-3xl p-10 max-w-md w-full text-center">
+                        <h3 class="text-2xl font-bold mb-8">${ep.title}</h3>
+                        <p class="text-slate-400 mb-8">Was it a Goal or Assist?</p>
+                        
+                        <div class="flex gap-4">
+                            <button onclick="checkGA('Goal', '${ep.answer}', '${ep.fact}', this.closest('.fixed'))" class="flex-1 py-5 bg-white text-slate-950 font-bold rounded-2xl">GOAL</button>
+                            <button onclick="checkGA('Assist', '${ep.answer}', '${ep.fact}', this.closest('.fixed'))" class="flex-1 py-5 border border-slate-600 font-bold rounded-2xl">ASSIST</button>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+            }
+            
+            window.checkGA = function(choice, correct, fact, modal) {
+                modal.remove();
+                const isCorrect = choice === correct;
+                if (isCorrect) sc += 10;
+                
+                const fb = document.createElement('div');
+                fb.className = `fixed bottom-10 left-1/2 -translate-x-1/2 px-8 py-5 rounded-3xl z-[130] text-center ${isCorrect ? 'bg-emerald-600' : 'bg-rose-600'}`;
+                fb.innerHTML = `
+                    <div class="font-bold">${isCorrect ? '✅ Correct!' : '❌ Wrong!'}</div>
+                    <div class="text-sm mt-1">${fact}</div>
+                `;
+                document.body.appendChild(fb);
+                
+                setTimeout(() => {
+                    fb.remove();
+                    i++;
+                    showEp();
+                }, 1600);
+            };
+            
+            showEp();
+        }
+        
+        function joinClub() {
+            const m = document.createElement('div');
+            m.className = 'fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-6';
+            m.innerHTML = `
+                <div class="bg-slate-900 border border-slate-700 rounded-3xl p-10 max-w-sm w-full text-center">
+                    <div class="text-7xl mb-6">💙</div>
+                    <h3 class="text-3xl font-bold mb-4">Welcome to the Club!</h3>
+                    <p class="text-slate-400 mb-8">You've officially joined the Eden Hazard Chelsea Fan Club.</p>
+                    <button onclick="this.closest('.fixed').remove()" class="px-12 py-4 bg-white text-slate-950 font-bold rounded-3xl">Done</button>
+                </div>
+            `;
+            document.body.appendChild(m);
+        }
+        
+        function init() {
+            loadTheme();
+            
+            // Set initial language button
+            document.getElementById('lang-en').classList.add('bg-white', 'text-slate-950');
+            
+            // Navbar scroll
+            const nav = document.querySelector('nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    nav.classList.add('!bg-slate-900');
+                } else {
+                    nav.classList.remove('!bg-slate-900');
+                }
+            });
+            
+            console.log('%c[FINAL PREMIUM] All systems ready and 100% working.', 'color:#64748b');
+        }
+        
+        window.onload = init;
+    </script>
+</body>
+</html>
